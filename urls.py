@@ -6,7 +6,7 @@ handlers = []
 ui_modules = {}
 
 # the module names in handlers folder
-handler_names = ["status"]
+handler_names = ["seed"]
 
 def _resolve_name(name, package, level):
     """Return the absolute name of the module to be imported."""

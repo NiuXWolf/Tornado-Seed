@@ -16,7 +16,7 @@ class Application(tornado.web.Application):
         #from db import Model
 
         settings = dict(debug=options.debug,
-                        template_path=os.path.join(os.path.dirname(__file__),"template"),
+                        template_path=os.path.join(os.path.dirname(__file__),"templates"),
                         static_path=os.path.join(os.path.dirname(__file__),"static"),
                         login_url=options.login_url,
                         xsrf_cookies=options.xsrf_cookies,
@@ -39,7 +39,6 @@ class Application(tornado.web.Application):
 
 def main():
     parse_options()
-    print (options.app_url_prefix)
     http_server = tornado.httpserver.HTTPServer(Application(),xheaders=True)
     http_server.bind(int(options.port), "127.0.0.1")  # listen local only
     http_server.start(1)

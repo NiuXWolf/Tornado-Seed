@@ -1,0 +1,2 @@
+celery==3.1.20
+tornado=4.0.0

@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-#
-# Copyright (c) 2012 feilong.me. All rights reserved.
-#
-# @author: Felinx Lee <felinx.lee@gmail.com>
-# Created on  Jun 30, 2012
-#
-
 from db import Model
 
 

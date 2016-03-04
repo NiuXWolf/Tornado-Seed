@@ -7,33 +7,7 @@ from tornado.web import RequestHandler as BaseRequestHandler, HTTPError
 import exceptions
 #from d3status.tasks import email_tasks
 
-
-class BaseHandler(BaseRequestHandler):
-    def get(self, *args, **kwargs):
-        # enable GET request when enable delegate get to post
-        if options.app_get_to_post:
-            self.post(*args, **kwargs)
-        else:
-            raise exceptions.HTTPAPIError(405)
-
-    def prepare(self):
-        self.traffic_control()
-        pass
-
-    def traffic_control(self):
-        # traffic control hooks for api call etc
-        self.log_apicall()
-        pass
-
-    def log_apicall(self):
-        pass
-
-
-class RequestHandler(BaseHandler):
-    pass
-
-
-class APIHandler(BaseHandler):
+class APIHandler(BaseRequestHandler):
     def get_current_user(self):
         pass
 
@@ -101,17 +75,3 @@ class APIHandler(BaseHandler):
                                                   options.admins, subject, body)
         except Exception:
             logging.error(traceback.format_exc())
-
-
-class ErrorHandler(RequestHandler):
-    """Default 404: Not Found handler."""
-    def prepare(self):
-        super(ErrorHandler, self).prepare()
-        raise HTTPError(404)
-
-
-class APIErrorHandler(APIHandler):
-    """Default API 404: Not Found handler."""
-    def prepare(self):
-        super(APIErrorHandler, self).prepare()
-        raise exceptions.HTTPAPIError(404)

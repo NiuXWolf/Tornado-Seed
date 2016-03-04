@@ -12,7 +12,14 @@ _root = os.path.join(_dir, "..")
 sys.path.append(os.path.join(_root, ".."))
 sys.path.append(_dir)
 
-from  importlib import import_module find_modules
+from importlib import import_module
+
+def find_modules(modules_dir):
+    try:
+        return [f[:-3] for f in os.listdir(modules_dir)
+                if not f.startswith('_') and f.endswith('.py')]
+    except OSError:
+        return []
 
 def _load_tasks():
     _current_module = sys.modules[__name__]

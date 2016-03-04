@@ -3,13 +3,6 @@ import os
 import mimetypes
 
 
-def find_modules(modules_dir):
-    try:
-        return [f[:-3] for f in os.listdir(modules_dir)
-                if not f.startswith('_') and f.endswith('.py')]
-    except OSError:
-        return []
-        
 def _resolve_name(name, package, level):
     """Return the absolute name of the module to be imported."""
     if not hasattr(package, 'rindex'):

@@ -5,7 +5,7 @@ import os
 
 #root_dir = ''
 
-if platform.node() == "FELINX":  # FELINX is the hosting server name.
+if platform.node() == "TR":  # FELINX is the hosting server name.
     debug = False
 else:
     debug = True
@@ -15,14 +15,14 @@ port = 8888
 
 
 sitename = "DSE Status"
-domain = "api.tr.me"
+domain = "trdse.com"
 home_url = "http://%s/d3" % domain
-login_url = "http://%s/login" % home_url
-app_url_prefix = "/d3/v1"
+#login_url = "http://%s/login" % home_url
+app_url_prefix = "/dse/v1"
 email_from = "%s <noreply@%s>" % (sitename, domain)
-admins = ("Felinx <felinx.lee@gmail.com>",)
+admins = ("Y.Yu@thomsonreuters.com",)
 send_error_email = True
-cookie_secret = "d1d87395-8272-4749-b2f2-dcabd3903a1c"
+cookie_secret = "d2d87395-8272-4749-b2f2-dcabd3903a1d"
 xsrf_cookies = False
 
 
@@ -33,9 +33,10 @@ mysql = {"host": "localhost",
          "password": "felinx"
          }
 
-smtp = {"host": "localhost",
-        "user": "",
-        "password": "",
+smtp = {"host": "smtp.qq.com",
+        "port":"25",
+        "user": "786381191@qq.com",
+        "password": "xxx",
         "duration": 30,
         "tls": False
         }

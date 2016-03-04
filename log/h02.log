@@ -22,3 +22,163 @@ Fri, 04 Mar 2016 11:08:35 seed.py[line:14] WARNING This is warning message
 Fri, 04 Mar 2016 11:08:35 seed.py[line:12] DEBUG This is debug message
 Fri, 04 Mar 2016 11:08:35 seed.py[line:13] INFO This is info message
 Fri, 04 Mar 2016 11:08:35 seed.py[line:14] WARNING This is warning message
+Fri, 04 Mar 2016 11:31:21 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:15 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:21 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:39 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:40 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:40 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:40 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:40 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:40 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:52 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:53 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:53 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:53 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:54 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:54 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:54 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:54 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:55 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:55 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:55 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 11:32:55 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:06 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:06 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:07 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:07 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:07 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:08 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:08 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:08 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:08 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:34:08 seed.py[line:19] DEBUG This is debug message
+Fri, 04 Mar 2016 12:42:27 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:43:59 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:37 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:39 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:39 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:40 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:40 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:40 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:48:40 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:49:41 handler.py[line:64] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 44, in write_error
+    if isinstance(e, exceptions.HTTPAPIError):
+AttributeError: 'module' object has no attribute 'HTTPAPIError'
+
+Fri, 04 Mar 2016 12:59:35 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:37 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:37 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:38 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:38 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:38 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:39 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:39 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:39 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 12:59:39 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 13:04:27 handler.py[line:63] ERROR Traceback (most recent call last):
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 48, in write_error
+    e = APIError(500)
+  File "C:\Users\U6036458\Documents\GitHub\Tornado-Seed\handler.py", line 88, in __init__
+    super(HTTPAPIError, self).__init__(int(status_code), log_message, *args)
+NameError: global name 'HTTPAPIError' is not defined
+
+Fri, 04 Mar 2016 13:32:28 seed.py[line:14] DEBUG This is debug message
+Fri, 04 Mar 2016 13:32:28 seed.py[line:15] WARNING This is warning message

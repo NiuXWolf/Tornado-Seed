@@ -4,7 +4,6 @@ import logging
 from tornado import escape
 from tornado.options import options
 from tornado.web import RequestHandler as BaseRequestHandler, HTTPError
-import exceptions
 #from d3status.tasks import email_tasks
 
 class APIHandler(BaseRequestHandler):
@@ -41,12 +40,12 @@ class APIHandler(BaseRequestHandler):
             exc_info = kwargs.pop('exc_info')
             e = exc_info[1]
 
-            if isinstance(e, exceptions.HTTPAPIError):
+            if isinstance(e, APIError):
                 pass
             elif isinstance(e, HTTPError):
-                e = exceptions.HTTPAPIError(e.status_code)
+                e = APIError(e.status_code)
             else:
-                e = exceptions.HTTPAPIError(500)
+                e = APIError(500)
 
             exception = "".join([ln for ln in traceback.format_exception(*exc_info)])
 
@@ -65,13 +64,53 @@ class APIHandler(BaseRequestHandler):
             return super(APIHandler, self).write_error(status_code, **kwargs)
 
     def _send_error_email(self, exception):
-        try:
-            # send email
-            subject = "[%s]Internal Server Error" % options.sitename
-            body = self.render_string("errors/500_email.html",
-                                      exception=exception)
-            if options.send_error_email:
-                email_tasks.send_email_task.delay(options.email_from,
-                                                  options.admins, subject, body)
-        except Exception:
-            logging.error(traceback.format_exc())
+        pass
+        # try:
+        #     # send email
+        #     subject = "[%s]Internal Server Error" % options.sitename
+        #     body = self.render_string("errors/500_email.html",
+        #                               exception=exception)
+        #     if options.send_error_email:
+        #         email_tasks.send_email_task.delay(options.email_from,
+        #                                           options.admins, subject, body)
+        # except Exception:
+        #     logging.error(traceback.format_exc())
+
+class APIError(HTTPError):
+    """API error handling exception
+
+    API server always returns formatted JSON to client even there is
+    an internal server error.
+    """
+    def __init__(self, status_code=400, error_detail="", error_type="",
+                 notification="", response="", log_message=None, *args):
+
+        super(APIError, self).__init__(int(status_code), log_message, *args)
+
+        self.error_type = error_type if error_type else \
+            _error_types.get(self.status_code, "unknow_error")
+        self.error_detail = error_detail
+        self.notification = {"message": notification} if notification else {}
+        self.response = response if response else {}
+
+    def __str__(self):
+        err = {"meta": {"code": self.status_code, "errorType": self.error_type}}
+        self._set_err(err, ["notification", "response"])
+
+        if self.error_detail:
+            err["meta"]["errorDetail"] = self.error_detail
+
+        return escape.json_encode(err)
+
+    def _set_err(self, err, names):
+        for name in names:
+            v = getattr(self, name)
+            if v:
+                err[name] = v
+
+_error_types = {400: "param_error",
+                401: "invalid_auth",
+                403: "not_authorized",
+                404: "endpoint_error",
+                405: "method_not_allowed",
+                500: "server_error"}

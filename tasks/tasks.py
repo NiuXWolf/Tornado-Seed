@@ -6,13 +6,13 @@ Setup env for celery tasks and import them.
 import os
 import platform
 import sys
+from importlib import import_module
+from celery import Celery
 
 _dir = os.path.dirname(os.path.abspath(__file__))
 _root = os.path.join(_dir, "..")
 sys.path.append(os.path.join(_root, ".."))
 sys.path.append(_dir)
-
-from importlib import import_module
 
 def find_modules(modules_dir):
     try:

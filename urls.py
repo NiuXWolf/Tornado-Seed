@@ -7,7 +7,7 @@ handlers = []
 ui_modules = {}
 
 # the module names in handlers folder
-handler_names = ["seed"]
+handler_names = ["seed","task"]
 
 def _generate_handler_patterns(root_module, handler_names, prefix=options.app_url_prefix):
     for name in handler_names:

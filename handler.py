@@ -4,7 +4,7 @@ import logging
 from tornado import escape
 from tornado.options import options
 from tornado.web import RequestHandler as BaseRequestHandler, HTTPError
-#from d3status.tasks import email_tasks
+#from tasks import email_tasks
 
 class APIHandler(BaseRequestHandler):
     def get_current_user(self):

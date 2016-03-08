@@ -26,17 +26,9 @@ cookie_secret = "d2d87395-8272-4749-b2f2-dcabd3903a1d"
 xsrf_cookies = False
 
 
-mysql = {"host": "localhost",
-         "port": "3306",
-         "database": "d3status",
-         "user": "felinx",
-         "password": "felinx"
-         }
-
-smtp = {"host": "smtp.qq.com",
-        "port":"25",
-        "user": "786381191@qq.com",
-        "password": "xxx",
-        "duration": 30,
-        "tls": False
-        }
+# mysql = {"host": "localhost",
+#          "port": "3306",
+#          "database": "d3status",
+#          "user": "felinx",
+#          "password": "felinx"
+#          }

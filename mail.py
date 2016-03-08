@@ -10,8 +10,9 @@ from email.mime.text import MIMEText
 from email.utils import COMMASPACE
 from email.utils import formatdate
 
+import consts
 from tornado.escape import utf8
-from tornado.options import options
+#from tornado.options import options
 
 def send_email(fr, to, subject, body, html=None, attachments=[]):
     """Send an email.
@@ -70,8 +71,9 @@ class EmailAddress(object):
 
 
 class _SMTPSession(object):
-    def __init__(self, host, user='', password='', duration=30, tls=False):
+    def __init__(self, host, port=465,user='', password='', duration=30, tls=False):
         self.host = host
+        self.port=port
         self.user = user
         self.password = password
         self.duration = duration
@@ -106,7 +108,7 @@ class _SMTPSession(object):
         except Exception:
             pass
 
-        self.session = smtplib.SMTP(self.host,465)
+        self.session = smtplib.SMTP(self.host,self.port)
         if self.user and self.password:
             if self.tls:
                 self.session.starttls()
@@ -119,11 +121,12 @@ class _SMTPSession(object):
 def _get_session():
     global _session
     if _session is None:
-        _session = _SMTPSession(options.smtp['host'],
-                                options.smtp['user'],
-                                options.smtp['password'],
-                                options.smtp['duration'],
-                                options.smtp['tls'])
+        _session = _SMTPSession(consts.smtp['host'],
+                                consts.smtp['port'],
+                                consts.smtp['user'],
+                                consts.smtp['password'],
+                                consts.smtp['duration'],
+                                consts.smtp['tls'])
 
     return _session
 

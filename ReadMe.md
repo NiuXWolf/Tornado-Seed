@@ -1,1 +1,2 @@
-in root path run `celery -A tasks worker` and `celery -A tasks beat`
+in root path run `celery -A tasks worker` and `celery -A tasks beat`  
+`python manage.py runserver`

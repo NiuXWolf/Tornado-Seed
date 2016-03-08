@@ -3,8 +3,6 @@
 import platform
 import os
 
-#root_dir = ''
-
 if platform.node() == "TR":  # FELINX is the hosting server name.
     debug = False
 else:
@@ -12,7 +10,6 @@ else:
 
 loglevel = "INFO"  # for celeryd
 port = 8888
-
 
 sitename = "DSE Status"
 domain = "trdse.com"
@@ -24,11 +21,3 @@ admins = ("Y.Yu@thomsonreuters.com",)
 send_error_email = True
 cookie_secret = "d2d87395-8272-4749-b2f2-dcabd3903a1d"
 xsrf_cookies = False
-
-
-# mysql = {"host": "localhost",
-#          "port": "3306",
-#          "database": "d3status",
-#          "user": "felinx",
-#          "password": "felinx"
-#          }

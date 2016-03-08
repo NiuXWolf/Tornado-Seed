@@ -10,3 +10,10 @@ smtp = {"host": "smtp.qq.com",
         "duration": 30,
         "tls": False
         }
+
+mysql = {"host": "localhost",
+         "port": "3306",
+         "database": "d3status",
+         "user": "felinx",
+         "password": "felinx"
+         }

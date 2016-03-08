@@ -7,13 +7,11 @@ import tornado.ioloop
 import tornado.web
 from tornado.options import options
 
-
 from options import parse_options;
 
 class Application(tornado.web.Application):
     def __init__(self):
         from urls import handlers, ui_modules
-        #from db import Model
 
         settings = dict(debug=options.debug,
                         template_path=os.path.join(os.path.dirname(__file__),"templates"),
@@ -23,16 +21,6 @@ class Application(tornado.web.Application):
                         cookie_secret=options.cookie_secret,
                         ui_modules=ui_modules,
                         )
-
-        #  db connection
-        # self.db = Connection(host=options.mysql["host"] + ":" +
-        #                         options.mysql["port"],
-        #                      database=options.mysql["database"],
-        #                      user=options.mysql["user"],
-        #                      password=options.mysql["password"],
-        #                      )
-        #
-        # Model.setup_dbs({"db": self.db})
 
         super(Application, self).__init__(handlers, **settings)
 

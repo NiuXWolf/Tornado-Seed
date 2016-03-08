@@ -16,7 +16,7 @@ CELERYBEAT_SCHEDULE = {
         'schedule': crontab(hour=7, minute=30, day_of_week=1),
         'args': (16, 16),
     },
-    'add-every-30-seconds': {
+    'add-every-60-seconds': {
             'task': 'tasks.seed_tasks.add_task',
             'schedule':crontab(hour='*', minute='*', day_of_week='*'),
             'args': (16, 1)

@@ -1,10 +1,13 @@
 amqp==1.4.9
 anyjson==0.3.3
+Babel==2.2.0
 backports-abc==0.4
 backports.ssl-match-hostname==3.5.0.1
 billiard==3.3.0.23
 celery==3.1.20
 certifi==2016.2.28
+email==4.0.2
+flower==0.8.4
 futures==3.0.5
 kombu==3.0.34
 pika==0.10.0
@@ -14,4 +17,5 @@ singledispatch==3.4.0.3
 six==1.10.0
 SQLAlchemy==1.0.12
 tornado==4.2
+tornado-celery==0.3.5
 tornado-redis==2.4.18

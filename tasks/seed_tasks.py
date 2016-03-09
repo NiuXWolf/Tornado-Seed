@@ -9,6 +9,7 @@ logger = logging.getLogger("example01")
 
 @task
 def add_task(a,b):
-    logger.debug('This is task add')
-    logger.warning('This is task add')
+    # logger.debug('This is task add')
+    # logger.warning('This is task add')
     print a+b
+    return {'current': 100, 'total': 100, 'status': 'Task completed!','result': 42}

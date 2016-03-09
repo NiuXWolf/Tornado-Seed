@@ -26,9 +26,9 @@ class TaskHandler(APIHandler):
 
 class LongCallHandler(APIHandler):
     @asynchronous
-    @gen.coroutine
+    #@gen.coroutine
     def get(self):
-        #seed_tasks.add_task.apply_async(args=[3,6], callback=self.on_result)
+        seed_tasks.add_task.apply_async(args=[3,6], callback=self.on_result)
         #response = yield gen.Task(seed_tasks.add_task.delay,(8,8))
         #self.write(response.result)
         #self.finish()

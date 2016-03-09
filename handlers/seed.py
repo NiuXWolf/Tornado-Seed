@@ -1,5 +1,7 @@
 from tornado.web import RequestHandler
 from handler import APIHandler
+from tornado.web import asynchronous
+from tornado import gen
 import consts
 import logging
 import logging.config
@@ -20,6 +22,13 @@ class StatusHandler(APIHandler):
 		status={"status": {"items": []}}
 		self.finish(status)
 
+class SleepHandler(RequestHandler):
+    @asynchronous
+    @gen.coroutine
+    def get(self):
+        yield gen.Task(tornado.ioloop.IOLoop.instance().add_timeout, time.time() + 5)
+        self.write("when i sleep 5s")
 
 handlers = [(r"/index", IndexHandler),
-			(r"/status", StatusHandler)]
+			(r"/status", StatusHandler),
+			(r"/sleep",SleepHandler)]

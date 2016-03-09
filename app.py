@@ -9,6 +9,9 @@ from tornado.options import options
 
 from options import parse_options;
 
+import tcelery
+tcelery.setup_nonblocking_producer()
+
 class Application(tornado.web.Application):
     def __init__(self):
         from urls import handlers, ui_modules

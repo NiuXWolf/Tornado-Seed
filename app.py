@@ -12,9 +12,12 @@ from options import parse_options;
 import tcelery
 tcelery.setup_nonblocking_producer()
 
+import sqlite3
+
 class Application(tornado.web.Application):
     def __init__(self):
         from urls import handlers, ui_modules
+        from db import Model
 
         settings = dict(debug=options.debug,
                         template_path=os.path.join(os.path.dirname(__file__),"templates"),
@@ -24,6 +27,9 @@ class Application(tornado.web.Application):
                         cookie_secret=options.cookie_secret,
                         ui_modules=ui_modules,
                         )
+
+        self.sqlite = sqlite3.connect("./sqlite.db")
+        Model.setup_dbs({"sqlite": self.sqlite})
 
         super(Application, self).__init__(handlers, **settings)
 
